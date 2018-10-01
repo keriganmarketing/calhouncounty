@@ -2159,12 +2159,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
     props: {
         mobileNav: {
-            type: Object,
+            type: Object / Array,
             default: function _default() {
                 return [];
             }
@@ -2181,9 +2184,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.mobileNavData = Object.keys(this.mobileNav).map(function (key) {
             _this.mobileNav[key].subMenuOpen = false;
-            if (_this.mobileNav[key].children.length > 0) {
-                _this.mobileNav[key].subMenuOpen = true;
-            }
+            // if(this.mobileNav[key].children.length > 0){
+            //     this.mobileNav[key].subMenuOpen = true;
+            // }
             return _this.mobileNav[key];
         });
     },
@@ -2192,7 +2195,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         toggleSubMenu: function toggleSubMenu(navitem) {
             this.mobileNavData[navitem].subMenuOpen = !this.mobileNavData[navitem].subMenuOpen;
-            console.log(navitem);
         }
     }
 
@@ -11492,7 +11494,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.mobile-menu {\n  transition: all ease-in 1s;\n  display: none;\n  background-color: #20c997;\n}\n.mobile-menu.open {\n    display: block;\n    width: 100%;\n    max-height: 100vh;\n    z-index: 5;\n    padding: 5rem 2rem 2rem;\n    color: #FFF;\n    position: fixed;\n}\n.mobile-menu.open ul.navbar-nav li a {\n      font-size: 18px;\n      color: #FFF;\n}\n.mobile-menu .nav-icon {\n    font-size: 1.2em;\n    padding: .25rem .5rem;\n    position: absolute;\n    right: 0;\n    margin-top: -2.5rem;\n    cursor: pointer;\n}\n.mobile-menu .dropdown-menu {\n    border: 0;\n    display: block;\n    padding: .5rem 1rem;\n    background-color: #1aa37b;\n}\n", ""]);
+exports.push([module.i, "\n.mobile-menu {\n  transition: display ease-in .5s;\n  display: none;\n}\n.mobile-menu.open {\n    display: block;\n    margin-top: 60px;\n    width: 100%;\n    height: calc(100vh - 60px);\n    z-index: 5;\n    padding: 1.5rem;\n    color: #FFF;\n    position: fixed;\n    overflow-y: scroll;\n}\n.mobile-menu.open ul.navbar-nav li button,\n    .mobile-menu.open ul.navbar-nav li a {\n      font-size: 18px;\n      color: #FFF;\n      border-radius: 0;\n      background-color: transparent;\n}\n.mobile-menu .nav-icon {\n    font-size: 1.2em;\n    padding: .25rem .5rem;\n    position: absolute;\n    right: 0;\n    margin-top: -.4rem;\n    cursor: pointer;\n    color: #FFF;\n}\n.mobile-menu .dropdown-menu {\n    border: 0;\n    display: block;\n    padding: .5rem 1rem;\n    border-top: 1px solid #253217;\n    border-bottom: 1px solid #253217;\n    border-radius: 0;\n}\n", ""]);
 
 // exports
 
@@ -16579,20 +16581,20 @@ var render = function() {
           class: { dropdown: navitem.children.length > 0 }
         },
         [
-          _c(
-            "a",
-            {
-              class: "nav-link",
-              attrs: { href: navitem.url, target: navitem.target }
-            },
-            [_vm._v(_vm._s(navitem.title))]
-          ),
-          _vm._v(" "),
-          navitem.children.length > 0
+          navitem.children.length == 0
             ? _c(
-                "span",
+                "a",
                 {
-                  staticClass: "nav-icon",
+                  class: "nav-link",
+                  attrs: { href: navitem.url, target: navitem.target }
+                },
+                [_vm._v(_vm._s(navitem.title))]
+              )
+            : _c(
+                "button",
+                {
+                  staticClass:
+                    "nav-link btn text-left btn-block bg-white border-0",
                   on: {
                     click: function($event) {
                       _vm.toggleSubMenu(index)
@@ -16600,16 +16602,22 @@ var render = function() {
                   }
                 },
                 [
-                  _c("i", {
-                    staticClass: "fa",
-                    class: {
-                      "fa-plus-circle": !navitem.subMenuOpen,
-                      "fa-minus-circle": navitem.subMenuOpen
-                    }
-                  })
+                  _vm._v(
+                    "\n            " + _vm._s(navitem.title) + "\n            "
+                  ),
+                  navitem.children.length > 0
+                    ? _c("span", { staticClass: "nav-icon" }, [
+                        _c("i", {
+                          staticClass: "fa",
+                          class: {
+                            "fa-plus-circle": !navitem.subMenuOpen,
+                            "fa-minus-circle": navitem.subMenuOpen
+                          }
+                        })
+                      ])
+                    : _vm._e()
                 ]
-              )
-            : _vm._e(),
+              ),
           _vm._v(" "),
           navitem.subMenuOpen
             ? _c(

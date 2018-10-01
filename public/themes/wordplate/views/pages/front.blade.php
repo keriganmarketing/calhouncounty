@@ -6,12 +6,14 @@
         {{ the_post() }}
                 
         <kma-slider class="slider-container"></kma-slider>
-        <div class="position-absolute">
-            <div class="welcome">
-                <p class="biggest">WELCOME</p>
-                {{ get_search_form() }}
+        
+        <div class="welcome position-absolute">
+            <div class="text-center">
+            <p class="biggest text-white">WELCOME</p>
+            {{ get_search_form() }}
             </div>
         </div>
+        @include('partials.buttongallery')
         <main role="main">
             <div class="container">
 
