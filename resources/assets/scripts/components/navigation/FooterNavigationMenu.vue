@@ -1,7 +1,9 @@
 <template>
-    <div class="row">
-        <div v-for="navitem in navItems" v-bind:key="navitem.ID" class="col-md-4" >
-            <h3 class="cookie text-info" ><a class="text-info" :href="navitem.url" :class="navitem.classes" :target="navitem.target" >{{ navitem.title }}</a></h3>
+    <div class="footer-nav">
+        <div v-for="navitem in navItems" v-bind:key="navitem.ID" class="footer-nav-section" >
+            <p class="subtitle" >
+                <a :href="navitem.url" :class="navitem.classes" :target="navitem.target" >{{ navitem.title }}</a>
+            </p>
             <p v-if="navitem.children.length > 0" class="nav-item" >
                 <a 
                     v-for="(child, i) in navitem.children" v-bind:key="i"
