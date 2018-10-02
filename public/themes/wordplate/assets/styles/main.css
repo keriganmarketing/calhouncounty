@@ -2808,25 +2808,25 @@ h6,
 
 .display-1 {
   font-size: 6rem;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.2;
 }
 
 .display-2 {
   font-size: 5.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -12426,6 +12426,9 @@ body #app .site-wrapper.text-largest .button-gallery.sizeable h2 {
 .top .topnav .nav-link {
   color: #FFF;
   padding: 1.5rem .75rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .top .topnav .nav-link:hover {
@@ -12435,7 +12438,7 @@ body #app .site-wrapper.text-largest .button-gallery.sizeable h2 {
 .top .topnav .dropdown-menu {
   border: 0;
   border-top: 0.5rem solid #63752a;
-  margin-top: -1px;
+  margin-top: -.5rem;
   border-radius: 0;
   padding: 0;
   background-color: #253217;
@@ -12449,8 +12452,7 @@ body #app .site-wrapper.text-largest .button-gallery.sizeable h2 {
 }
 
 .top .topnav .dropdown-menu .dropdown-item:hover {
-  color: #076974;
-  background-color: #253217 !important;
+  color: #ffc600;
 }
 
 .top-pad {
@@ -12499,6 +12501,10 @@ ul.navbar-nav li a {
   text-decoration: none;
   font-weight: 600;
   transition: all .5s linear;
+}
+
+ul.navbar-nav li a:hover {
+  color: #ffc600;
 }
 
 .scrolling .top {
@@ -12582,19 +12588,18 @@ main article header {
 }
 
 main article h1 {
-  color: #076974;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.6rem;
   padding-bottom: 2rem;
 }
 
 main article h2 {
   color: #63752a;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 main article h3 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 main .embed-responsive {

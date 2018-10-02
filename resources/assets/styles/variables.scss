@@ -278,10 +278,10 @@ $display2-size:               5.5rem;
 $display3-size:               4.5rem;
 $display4-size:               3.5rem;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             $font-weight-bold;
+$display2-weight:             $font-weight-normal;
+$display3-weight:             $font-weight-normal;
+$display4-weight:             $font-weight-normal;
 $display-line-height:         $headings-line-height;
 
 $lead-font-size:              ($font-size-base * 1.25);

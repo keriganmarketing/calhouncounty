@@ -9,7 +9,7 @@ use KeriganSolutions\KMAContactInfo\ContactInfo;
 require template_path('includes/plugins/plate.php');
 require template_path('includes/plugins/theme-setup.php');
 require template_path('includes/plugins/acf-page-fields.php');
-// require('post-types/contact_request.php');
+require('post-types/business-listing.php');
 
 (new Team())->use();
 (new ContactInfo())->addField([

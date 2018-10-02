@@ -17,12 +17,9 @@
         <main role="main" class="sizable">
             <div class="container">
 
-                <div class="row py-4">
+                <div class="row py-4 align-items-center">
                     <div class="col-lg-6 py-4">
                         <article class="front">
-                            <header>
-                                <h1>{{ the_title() }}</h1>
-                            </header>
                             
                             {{ the_content() }}
 
