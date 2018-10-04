@@ -2,13 +2,13 @@
     <div class="">
         <div class="d-md-flex justify-content-center no-gutters">
             <div class="col-md-3 box-button commissioner sizeable-element">
-                <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" href="#">
-                    <img src="/themes/wordplate/assets/images/commissioners-icon.png" class="img-fluid py-1 px-2" alt="County Commissioners icon" aria-hidden="true">
+                <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" href="/government/county-commissioners/">
+                    <img src="/themes/wordplate/assets/images/commissioner-icon.png" class="img-fluid py-1 px-2" alt="County Commissioners icon" aria-hidden="true">
                     <span>Meet Your<br>Commissioners</span>
                 </a>
             </div>
             <div class="col-md-3 box-button employment sizeable-element">
-                <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" href="#">
+                <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" href="/about/employment-opportunities/">
                     <img src="/themes/wordplate/assets/images/employment-icon.png" class="img-fluid py-1 px-2" alt="Employment Opportunities icon" aria-hidden="true">
                     <span>Employment<br>Opportunities</span>
                 </a>
