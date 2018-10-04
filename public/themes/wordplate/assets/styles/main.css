@@ -12231,7 +12231,8 @@ html input:focus {
 html .pad-anchor::before {
   content: " ";
   display: block;
-  position: absolute;
+  height: 150px;
+  width: 150px;
   margin-top: -150px;
 }
 
