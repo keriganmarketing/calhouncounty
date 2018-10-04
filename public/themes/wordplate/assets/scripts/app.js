@@ -11541,7 +11541,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.mobile-menu {\n  transition: display ease-in .5s;\n  display: none;\n}\n.mobile-menu.open {\n    display: block;\n    margin-top: 60px;\n    width: 100%;\n    height: calc(100vh - 60px);\n    z-index: 5;\n    padding: 1.5rem;\n    color: #FFF;\n    position: fixed;\n    overflow-y: scroll;\n}\n.mobile-menu.open ul.navbar-nav li button,\n    .mobile-menu.open ul.navbar-nav li a {\n      font-size: 18px;\n      color: #FFF;\n      border-radius: 0;\n      background-color: transparent;\n}\n.mobile-menu .nav-icon {\n    font-size: 1.2em;\n    padding: .25rem .5rem;\n    position: absolute;\n    right: 0;\n    margin-top: -.4rem;\n    cursor: pointer;\n    color: #FFF;\n}\n.mobile-menu .dropdown-menu {\n    border: 0;\n    display: block;\n    padding: .5rem 1rem;\n    border-top: 1px solid #253217;\n    border-bottom: 1px solid #253217;\n    border-radius: 0;\n}\n", ""]);
+exports.push([module.i, "\n.mobile-menu {\n  transition: display ease-in .5s;\n  display: none;\n}\n.mobile-menu.open {\n    display: block;\n    margin-top: 60px;\n    width: 100%;\n    height: calc(100vh - 60px);\n    z-index: 5;\n    padding: 1.5rem;\n    color: #FFF;\n    position: fixed;\n    overflow-y: scroll;\n}\n.mobile-menu.open ul.navbar-nav li button,\n    .mobile-menu.open ul.navbar-nav li a {\n      font-size: 18px;\n      color: #FFF;\n      border-radius: 0;\n      background-color: transparent;\n}\n.mobile-menu .nav-icon {\n    font-size: 1.2em;\n    padding: .25rem .5rem;\n    position: absolute;\n    right: 0;\n    margin-top: -.4rem;\n    cursor: pointer;\n    color: #FFF;\n}\n.mobile-menu .dropdown-menu {\n    border: 0;\n    display: block;\n    padding: .5rem 1rem;\n    border-radius: 0;\n}\n", ""]);
 
 // exports
 
@@ -16655,8 +16655,7 @@ var render = function() {
             : _c(
                 "button",
                 {
-                  staticClass:
-                    "nav-link btn text-left btn-block bg-white border-0",
+                  staticClass: "nav-link btn text-left btn-block border-0",
                   on: {
                     click: function($event) {
                       _vm.toggleSubMenu(index)

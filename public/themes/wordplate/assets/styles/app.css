@@ -12511,6 +12511,15 @@ ul.navbar-nav li a:hover {
   background-color: #63752a;
 }
 
+.mobile-menu.open button.nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mobile-menu.open .dropdown-menu {
+  background-color: #253217;
+}
+
 .search-form {
   width: 250px;
 }
