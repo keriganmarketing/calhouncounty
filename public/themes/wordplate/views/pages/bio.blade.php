@@ -8,7 +8,7 @@
         <main role="main">
             <div class="container">
                 <article class="support">
-                    <header class="text-primary">
+                    <header>
                         <h1>{{ $headline != '' ? $headline : the_title() }}</h1>
                     </header>
                     <div class="row">

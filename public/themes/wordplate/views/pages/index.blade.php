@@ -8,7 +8,7 @@
         <main role="main" class="sizable">
             <div class="container">
                 <article class="support">
-                    <header class="text-primary">
+                    <header>
                         <h1>{{ $headline != '' ? $headline : the_title() }}</h1>
                     </header>
                     {{ the_content() }}
