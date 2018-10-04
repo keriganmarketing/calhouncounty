@@ -119,6 +119,7 @@ function website_menu( $menuID ){
 
     $data = wp_get_nav_menu_items($menuID);
     $tempArray = [];
+    $orderedArray = [];
     $output = [];
 
     if(!is_array($data)){
@@ -126,19 +127,31 @@ function website_menu( $menuID ){
     }
 
     foreach($data as $key => $item){
+        $item->title = htmlspecialchars_decode($item->title);
+        $item->classes = implode(' ', $item->classes);
+        $orderedArray[$item->menu_order] = $item;
+    }
+
+    foreach($orderedArray as $item){
+        $item->children = [];
         if($item->menu_item_parent == 0){
-            $item->children = [];
-            $tempArray[$item->ID] = $item;
+            $tempArray[] = $item;
         }else{
-            $tempArray[$item->menu_item_parent]->children[] = $item;
+            foreach($tempArray as $child){
+                if($item->menu_item_parent == $child->ID){
+                    $child->children[] = $item;
+                }else{
+                    foreach($child->children as $c){
+                        if($item->menu_item_parent == $c->ID){
+                            $c->children[] = $item;
+                        }
+                    }
+                }
+            }
         }
     }
 
-    foreach($tempArray as $key => $item){
-        $item->title = htmlspecialchars_decode($item->title);
-        $item->classes = implode(' ', $item->classes);
-        $output[$item->menu_order] = $item;
-    }
+    $output = $tempArray;
 
     return json_encode($output);
 }
