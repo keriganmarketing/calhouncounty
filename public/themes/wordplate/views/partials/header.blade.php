@@ -15,7 +15,7 @@
                     ></i>
             </button>
             <div class="main-navigation collapse navbar-collapse flex-grow-1 full-height">
-                <main-menu :main-nav="{{ website_menu('main-navigation') }}" class="navbar-nav ml-auto full-height"></main-menu>
+                <main-menu :main-nav="{{ website_menu('main-navigation') }}" class="navbar-nav ml-auto full-height sizable"></main-menu>
             </div>
         </div>
     </div>
