@@ -24,6 +24,13 @@ html {
     input:focus {
         box-shadow: none !important;
     }
+
+    .pad-anchor::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        margin-top: -150px;
+    }
 }
 
 body {
@@ -154,7 +161,7 @@ body {
             border-radius: 0;
             padding: 0;
             background-color: $dark;
-            width: 230px;
+            width: auto;
 
             .dropdown-item {
                 color: #FFF;
@@ -313,6 +320,11 @@ main {
         h3 {
             font-weight: $display3-weight;
         }
+
+        .business-listings,
+        .team-grid {
+            padding: 1rem 0;
+        }
     }
 
     .embed-responsive {
@@ -428,21 +440,6 @@ main {
 
     @media (min-width: 1200px){
         height: 540px;
-    }
-}
-
-
-article h2,
-.short-underline {
-    text-transform: uppercase;
-
-    &::after {
-        content: " ";
-        display: block;
-        width:24px;
-        height: 3px;
-        background-color: #FFF;
-        margin: 5px 0;
     }
 }
 
