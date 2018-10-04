@@ -2,7 +2,7 @@
     <ul>
         <li v-for="(navitem, index) in mobileNavData" v-bind:key="index" class="nav-item" :class="{'dropdown': navitem.children.length > 0 }">
             <a v-if="navitem.children.length == 0" :href="navitem.url" :class="'nav-link'" :target="navitem.target" >{{ navitem.title }}</a>
-            <button v-else class="nav-link btn text-left btn-block bg-white border-0" @click="toggleSubMenu(index)" >
+            <button v-else class="nav-link btn text-left btn-block border-0" @click="toggleSubMenu(index)" >
                 {{ navitem.title }}
                 <span class="nav-icon" v-if="navitem.children.length > 0" >
                     <i class="fa" :class="{
@@ -93,8 +93,6 @@
         border: 0;
         display: block;
         padding: .5rem 1rem;
-        border-top: 1px solid #253217;
-        border-bottom: 1px solid #253217;
         border-radius: 0;
     }
 }
