@@ -9,7 +9,7 @@
             </header>
             {{ the_content() }}
             {{ wp_reset_query() }}
-            
+            test
         </article>
         @if (!empty($results))
             @foreach ($results as $post)
