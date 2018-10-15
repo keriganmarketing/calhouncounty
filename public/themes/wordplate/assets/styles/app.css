@@ -12837,14 +12837,8 @@ footer .footer-nav {
   max-height: auto;
 }
 
-@media (min-width: 768px) {
-  footer .footer-nav {
-    max-height: 300px;
-  }
-}
-
 footer .footer-nav .nav-item a {
-  padding: .15rem 0;
+  padding: .15rem 1rem .15rem 0;
 }
 
 footer .contact-info strong {
@@ -12904,5 +12898,17 @@ footer hr {
 footer .siteby {
   display: inline-block;
   padding: 0 1rem;
+}
+
+@media (min-width: 993px) {
+  .text-normal .footer-nav {
+    max-height: 435px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-normal .footer-nav {
+    max-height: 300px;
+  }
 }
 

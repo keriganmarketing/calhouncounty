@@ -16648,7 +16648,12 @@ var render = function() {
                 "a",
                 {
                   class: "nav-link",
-                  attrs: { href: navitem.url, target: navitem.target }
+                  attrs: { href: navitem.url, target: navitem.target },
+                  on: {
+                    click: function($event) {
+                      _vm.$emit("itemClicked")
+                    }
+                  }
                 },
                 [_vm._v(_vm._s(navitem.title))]
               )
@@ -16690,7 +16695,12 @@ var render = function() {
                       "a",
                       {
                         class: "nav-link",
-                        attrs: { href: child.url, target: child.target }
+                        attrs: { href: child.url, target: child.target },
+                        on: {
+                          click: function($event) {
+                            _vm.$emit("itemClicked")
+                          }
+                        }
                       },
                       [_vm._v(_vm._s(child.title))]
                     )
@@ -28868,6 +28878,9 @@ var app = new Vue({
             var playbutton = this.$refs.videobutton;
 
             this.videoPlaying = true;
+        },
+        itemClicked: function itemClicked() {
+            this.mobileMenuOpen = false;
         }
     },
 

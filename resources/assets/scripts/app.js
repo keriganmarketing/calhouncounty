@@ -51,6 +51,9 @@ const app = new Vue({
             let playbutton = this.$refs.videobutton;
 
             this.videoPlaying = true;
+        },
+        itemClicked() {
+            this.mobileMenuOpen = false;
         }
     },
 

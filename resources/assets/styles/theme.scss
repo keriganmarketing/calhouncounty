@@ -553,15 +553,10 @@ footer {
         display: flex;
         flex-flow: column wrap;
         padding: 1rem;
-
         max-height: auto;
 
-        @media (min-width:768px){
-            max-height: 300px;
-        }
-
         .nav-item a {
-            padding: .15rem 0;
+            padding: .15rem 1rem .15rem 0;
         }
     }
 
@@ -622,5 +617,17 @@ footer {
     .siteby {
         display: inline-block;
         padding: 0 1rem;
+    }
+}
+
+.text-normal {
+    .footer-nav {
+        @media (min-width:993px){
+            max-height: 435px;
+        }
+
+        @media (min-width:1200px){
+            max-height: 300px;
+        }
     }
 }
