@@ -16698,7 +16698,7 @@ var render = function() {
                         attrs: { href: child.url, target: child.target },
                         on: {
                           click: function($event) {
-                            _vm.$emit("itemClicked")
+                            _vm.$emit("itemclicked")
                           }
                         }
                       },

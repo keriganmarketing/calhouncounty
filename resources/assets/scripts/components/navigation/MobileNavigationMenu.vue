@@ -13,7 +13,7 @@
             </button>
             <div class="dropdown-menu" v-if="navitem.subMenuOpen" >
                 <li v-for="(child, i) in navitem.children" v-bind:key="i">
-                    <a @click="$emit('itemClicked')" :href="child.url" :class="'nav-link'" :target="child.target" >{{ child.title }}</a>
+                    <a @click="$emit('itemclicked')" :href="child.url" :class="'nav-link'" :target="child.target" >{{ child.title }}</a>
                 </li>
             </div>
         </li>
