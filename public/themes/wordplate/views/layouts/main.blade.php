@@ -4,6 +4,7 @@
   <meta charset="{{ bloginfo('charset') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#253217">
+  <meta name="google-site-verification" content="LBTxVuxOIXlbaFFhNxZdI8Qv5d15zPpduyT2XyfgtXU" />
   {{ wp_head() }}
 </head>
 <body {{ body_class() }}>
