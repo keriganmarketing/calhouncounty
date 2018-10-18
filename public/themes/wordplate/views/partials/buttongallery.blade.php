@@ -25,7 +25,9 @@
             </div>
             <div class="col-md-3 box-button clerk sizeable-element">
                 <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" 
-                    target="_blank" href="http://www.calhounclerk.com/">
+                    target="_blank" 
+                    href="http://www.calhounclerk.com/"
+                    rel="noreferrer">
                     <img 
                         src="/themes/wordplate/assets/images/clerk-icon.png" 
                         class="img-fluid py-1 px-2" 
@@ -36,7 +38,9 @@
             </div>
             <div class="col-md-3 box-button chamber sizeable-element">
                 <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" 
-                    target="_blank" href="http://www.calhounco.org/">
+                    target="_blank" 
+                    href="http://www.calhounco.org/"
+                    rel="noreferrer">
                     <img 
                         src="/themes/wordplate/assets/images/chamber-icon.png" 
                         class="img-fluid py-1 px-2" 

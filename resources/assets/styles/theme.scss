@@ -631,3 +631,14 @@ footer {
         }
     }
 }
+
+#cookieChoiceInfo {
+    background-color: $dark !important;
+    color: #FFF !important;
+    padding: 12px 50px !important;
+
+    a {
+        color: #FFF;
+        margin-left: 20px !important;
+    }
+}
