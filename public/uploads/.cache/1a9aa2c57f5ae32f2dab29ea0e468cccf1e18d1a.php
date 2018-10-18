@@ -21,7 +21,7 @@
     </div>
 </header>
 <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer" :class="{ 'open': this.mobileMenuOpen }" >
-    <mobile-menu @itemClicked="itemClicked" :mobile-nav="<?php echo e(website_menu('mobile-navigation')); ?>" class="navbar-nav m-auto" ></mobile-menu>
+    <mobile-menu @itemclicked="itemClicked" :mobile-nav="<?php echo e(website_menu('mobile-navigation')); ?>" class="navbar-nav m-auto" ></mobile-menu>
 </div>
 <div class="top-pad"></div>
 <?php echo $__env->make('partials.textsizer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
