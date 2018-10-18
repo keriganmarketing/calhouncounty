@@ -6,45 +6,35 @@
         {{ the_post() }}
                 
         <kma-slider class="slider-container"></kma-slider>
-        <main role="main">
+        
+        <div class="welcome position-absolute">
+            <div class="text-center">
+            <p class="biggest text-white">WELCOME</p>
+            {{ get_search_form() }}
+            </div>
+        </div>
+        @include('partials.buttongallery')
+        <main role="main" class="sizable">
             <div class="container">
 
-                <div class="row no-gutters">
-                    <div class="col-lg-7">
+                <div class="row py-4 align-items-center">
+                    <div class="col-lg-6 py-4">
                         <article class="front">
-                            <header>
-                                <h1>{{ the_title() }}</h1>
-                            </header>
                             
                             {{ the_content() }}
 
                         </article>
                     </div>
+                    <div class="col-lg-6 py-4">
+                        <div class="embed-responsive embed-responsive-16by9">
+                        {!! $video !!}
+                        <button v-if="!videoPlaying" class="video-button" aria-hidden="true" @click="playVideo" ref="videobutton"></button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </main>
-
-        <div class="feature-box-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-white box-container">
-                        <div class="feature-box feat-one">
-                            <h3 class="text-uppercase">{{ $featureBox1['title'] }}</h3>
-                            <p>{{ $featureBox1['text'] }}</p>
-                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox1['link']['url'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-white box-container">
-                        <div class="feature-box feat-two">
-                            <h3 class="text-uppercase">{{ $featureBox2['title'] }}</h3>
-                            <p>{{ $featureBox2['text'] }}</p>
-                            <a class="btn btn-lg btn-outline-white" href="{{ $featureBox2['link']['url'] }}" >Learn More &nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     @endwhile
 @else

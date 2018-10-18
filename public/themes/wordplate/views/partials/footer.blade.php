@@ -1,14 +1,26 @@
-<footer class="sticky-footer bg-light py-4">
-    <div class="container">
-        <div class="row">
-            
-           
-            
+<footer class="sticky-footer bg-light pt-4 sizable">
+    <div class="container footer-container">
+        <div class="row py-4">
+            <div class="col-lg-9 text-center text-lg-left">
+                <footer-menu :nav-items="{{ website_menu('footer-navigation') }}" ></footer-menu>
+            </div>
+            <div class="col-lg-3 text-center text-lg-left py-3">
+                <p class="subtitle">Contact Us</p>
+                <p class="contact-info">{!! nl2br(get_field('address', 'option')) !!}</p>
+                <p class="contact-info">
+                    <strong>Phone:</strong> 
+                    <a href="tel:{{ get_field('phone', 'option') }}">{{ get_field('phone', 'option') }}</a></p>
+                <p class="contact-info"><strong>Hours:</strong> {{ get_field('hours', 'option') }}</p>
+            </div>
         </div>
     </div>
     <hr>
-    <p class="copyright text-center">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
-        <a style="text-decoration:underline;" href="/privacy-policy" >Privacy&nbsp;Policy</a> 
+    <p class="copyright text-center py-4">&copy;{{ date('Y') }} {{ get_bloginfo() }}. All Rights&nbsp;Reserved. 
+        <a class="text-underline d-block d-md-inline text-secondary text-uppercase" href="/privacy-policy/" >Privacy&nbsp;Policy</a> 
+        <span class="d-none d-md-inline ">|</span>
+        <a class="text-underline d-block d-md-inline text-secondary text-uppercase" href="/accessibility-policy/" >Accessibility&nbsp;Policy</a> 
+        <span class="d-none d-md-inline">|</span>
+        <a class="text-underline d-block d-md-inline text-secondary text-uppercase" href="/sitemap_index.xml" >Site Map</a> 
         <span class="siteby">
             <svg version="1.1" id="kma" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="14" width="20"

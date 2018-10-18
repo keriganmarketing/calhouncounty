@@ -40,7 +40,7 @@ $purple:  #6f42c1;
 $pink:    #e83e8c;
 $red:     #dc3545;
 $orange:  #fd7e14;
-$yellow:  #e7b300;
+$yellow:  #ffc600;
 $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #076974;
@@ -82,6 +82,7 @@ $theme-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
   "info":       $info,
+  "accent":     $accent,
   "success":    $success,
   "warning":    $warning,
   "danger":     $danger,
@@ -251,8 +252,8 @@ $font-size-sm:                ($font-size-base * .875);
 
 $font-weight-light:           400;
 $font-weight-normal:          400;
-$font-weight-medium:          400;
-$font-weight-bold:            700;
+$font-weight-medium:          600;
+$font-weight-bold:            600;
 $font-weight-bolder:          800;
 $font-weight-black:           800;
 
@@ -269,7 +270,7 @@ $h6-font-size:                $font-size-base;
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-family:        inherit;
 $headings-font-weight:        700;
-$headings-line-height:        1.2;
+$headings-line-height:        $line-height-base;
 $headings-color:              inherit;
 
 $display1-size:               6rem;
@@ -277,10 +278,10 @@ $display2-size:               5.5rem;
 $display3-size:               4.5rem;
 $display4-size:               3.5rem;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             $font-weight-bolder;
+$display2-weight:             $font-weight-bold;
+$display3-weight:             $font-weight-normal;
+$display4-weight:             $font-weight-normal;
 $display-line-height:         $headings-line-height;
 
 $lead-font-size:              ($font-size-base * 1.25);

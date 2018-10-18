@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "dcfe6b6b1476325f7f03c81604a1c09e",
@@ -304,7 +304,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -348,7 +348,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -392,16 +392,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "2daf3c078610f744e2a4dc2f44fb5060cce9835b"
+                "reference": "72e125b25d3f7aabbf4b2ef68590db7637b8223c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/2daf3c078610f744e2a4dc2f44fb5060cce9835b",
-                "reference": "2daf3c078610f744e2a4dc2f44fb5060cce9835b",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/72e125b25d3f7aabbf4b2ef68590db7637b8223c",
+                "reference": "72e125b25d3f7aabbf4b2ef68590db7637b8223c",
                 "shasum": ""
             },
             "require": {
@@ -432,11 +432,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2018-09-18T12:50:05+00:00"
+            "time": "2018-09-27T14:15:29+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -481,7 +481,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -533,16 +533,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "f7c68e8c8aab200cc8ad84f974d5511cda58a742"
+                "reference": "d01c9ac04dee022ff3cd931e60e989a0d950812a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/f7c68e8c8aab200cc8ad84f974d5511cda58a742",
-                "reference": "f7c68e8c8aab200cc8ad84f974d5511cda58a742",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/d01c9ac04dee022ff3cd931e60e989a0d950812a",
+                "reference": "d01c9ac04dee022ff3cd931e60e989a0d950812a",
                 "shasum": ""
             },
             "require": {
@@ -588,20 +588,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-09-19T18:36:57+00:00"
+            "time": "2018-10-01T13:13:54+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.7.6",
+            "version": "v5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "3ccd29550afe61eb02ad9e4bae0c2e661aadd7af"
+                "reference": "86b8c60e502286135d9c91b0836a58445c4998b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/3ccd29550afe61eb02ad9e4bae0c2e661aadd7af",
-                "reference": "3ccd29550afe61eb02ad9e4bae0c2e661aadd7af",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/86b8c60e502286135d9c91b0836a58445c4998b5",
+                "reference": "86b8c60e502286135d9c91b0836a58445c4998b5",
                 "shasum": ""
             },
             "require": {
@@ -636,7 +636,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-09-18T12:50:05+00:00"
+            "time": "2018-10-02T13:51:18+00:00"
         },
         {
             "name": "johnpbloch/wordpress",

@@ -25,7 +25,8 @@ const app = new Vue({
         scrollPosition: 0,
         footerStuck: false,
         mobileMenuOpen: false,
-        textSize: 0
+        textSize: 0,
+        videoPlaying: false
     },
 
     methods: {
@@ -44,6 +45,15 @@ const app = new Vue({
         },
         resetTextSize() {
             this.textSize = 0;
+        },
+        playVideo() {
+            let player = this.$refs.videoplayer;
+            let playbutton = this.$refs.videobutton;
+
+            this.videoPlaying = true;
+        },
+        itemClicked() {
+            this.mobileMenuOpen = false;
         }
     },
 

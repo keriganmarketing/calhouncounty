@@ -9,7 +9,8 @@ use KeriganSolutions\KMAContactInfo\ContactInfo;
 require template_path('includes/plugins/plate.php');
 require template_path('includes/plugins/theme-setup.php');
 require template_path('includes/plugins/acf-page-fields.php');
-// require('post-types/contact_request.php');
+require('post-types/business-listing.php');
+require('taxonomies/team-category.php');
 
 (new Team())->use();
 (new ContactInfo())->addField([
@@ -81,32 +82,57 @@ function expand_login_logo()
 }
 add_action('login_enqueue_scripts', 'expand_login_logo');
 
-
-function team_shortcode() {
+function team_shortcode( $atts ) {
+	$a = shortcode_atts( array(
+        'category' => '',
+        'limit' => -1
+    ), $atts );
+    
     $output =
     '<div class="team-grid">
-        <div class="row justify-content-center">';
+        <div class="row">';
 
-    $team = new Team();
-    $members = $team->queryTeam();
+    $args = [
+        'posts_per_page' => $a['limit'],
+        'offset' => 0,
+        'order' => 'ASC',
+        'orderby' => 'menu_order',
+        'post_type' => 'team',
+        'post_status' => 'publish',
+    ];
 
-    foreach($members as $member){
+    if ( $a['category'] != '' ) {
+		$categoryarray = [
+			'relation' => 'AND',
+			[
+				'taxonomy'         => 'team-category',
+				'field'            => 'slug',
+				'terms'            => $a['category'],
+				'include_children' => false,
+			],
+		];
+		$args['tax_query'] = $categoryarray;
+	}
+
+    $team = get_posts($args);
+
+    foreach($team as $member){
+        $image = get_field('image', $member->ID);
         $output .=
         '<div class="col-md-6 col-lg-4">
-            <div class="card team-member text-center">
-                <a href="' . $member['link'] . '" >
-                    <img src="' . $member['image']['sizes']['thumbnail'] . '" class="card-img-top" alt="' . $member['name'] . '" >
+            <div class="team-member text-center full-height justify-content-center">
+                <a href="' . get_permalink($member->ID) . '" >
+                    <img src="' . $image['sizes']['thumbnail'] . '" class="img-fluid" alt="' . $member->post_title . '" >
                 </a>
                 <div class="card-body">
-                    <h3 class="text-uppercase text-dark">' . $member['name'] . '</h3>
-                    <p class="text-uppercase text-light">' . $member['title'] . '</p>
-                    <p class="text-uppercase text-light">
-                    <a href="mailto:' . $member['email'] . '" >' . $member['email'] . '</a><br>
-                    <a href="tel:' . $member['phone'] . '" >' . $member['phone'] . '</p>
+                    <h3 class="text-secondary font-weight-bold">' . $member->post_title . '</h3>
+                    <p class="m-0"><strong>' . get_field('title', $member->ID) . '</strong></p>
+                    '.($member->post_content!='' ? '<p>'.nl2br($member->post_content).'</p>' : '').'
+                    <p>
+                        <a href="mailto:' . get_field('email', $member->ID) . '" >' . get_field('email', $member->ID) . '</a><br>
+                        <a href="tel:' . get_field('phone', $member->ID) . '" >' . get_field('phone', $member->ID) . '</a>
+                    </p>
                 </div>
-            </div>
-            <div class="member-button text-center">
-                <a href="' . $member['link'] . '" class="btn btn-outline-light" >View Bio</a>
             </div>
         </div>';
     }

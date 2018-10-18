@@ -1,5 +1,5 @@
-<div class="projects-header header-image support" style="background-image: url('{{ $headerImage }}');">
-    <div class="container d-none d-xl-flex">
-        
-    </div>
-</div>
+@if($headerImage != '')
+<div class="header-image support" style="background-image: url('{{ $headerImage }}');"></div>
+@else
+<div class="header-image support"></div>
+@endif
