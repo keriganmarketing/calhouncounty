@@ -13,7 +13,7 @@
                     </header>
                     <div class="row">
                         <div class="col-md-4">
-                            <img class="img-fluid" src="{{ $team['image']['url'] }}">
+                            <img class="img-fluid" src="{{ $team['image']['url'] }}" alt="{{ $team['image']['alt'] }}">
                             <p>&nbsp;</p>
                         </div>
                         <div class="col-md-8">

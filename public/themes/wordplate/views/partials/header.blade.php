@@ -4,7 +4,7 @@
             <a class="logo" href="/">
                 <img src="/themes/wordplate/assets/images/calhoun-county-logo.png" alt="Calhoun County, Florida" class="img-fluid" >
             </a>
-            <button @click="toggleMenu" class="d-lg-none btn btn-sm btn-dark mobile-toggle" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button @click="toggleMenu" class="d-lg-none btn btn-sm btn-dark mobile-toggle" type="button" data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu" aria-expanded="false" aria-label="Toggle navigation">
                 MENU <i
                         class="fa" 
                         :class="{
@@ -21,7 +21,7 @@
     </div>
 </header>
 <div v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer" :class="{ 'open': this.mobileMenuOpen }" >
-    <mobile-menu @itemclicked="itemClicked" :mobile-nav="{{ website_menu('mobile-navigation') }}" class="navbar-nav m-auto" ></mobile-menu>
+    <mobile-menu @itemclicked="itemClicked" id="mobilemenu" :mobile-nav="{{ website_menu('mobile-navigation') }}" class="navbar-nav m-auto" ></mobile-menu>
 </div>
 <div class="top-pad"></div>
 @include('partials.textsizer')
