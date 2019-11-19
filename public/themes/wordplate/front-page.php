@@ -19,7 +19,7 @@ $newSrc = add_query_arg($params, $src);
 $iframe = str_replace($src, $newSrc, $iframe);
 $iframe = preg_replace('/width="(.+?)"/', '', $iframe);
 $iframe = preg_replace('/height="(.+?)"/', '', $iframe);
-$att    = 'frameborder="0" class="embed-responsive-item" ref="videoplayer"  v-if="videoPlaying" ';
+$att    = 'class="embed-responsive-item" ref="videoplayer"  v-if="videoPlaying" ';
 
 $iframe = str_replace('></iframe>', ' ' . $att . '></iframe>', $iframe);
 
