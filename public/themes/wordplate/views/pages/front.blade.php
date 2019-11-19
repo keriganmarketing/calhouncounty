@@ -14,7 +14,7 @@
             </div>
         </div>
         @include('partials.buttongallery')
-        <main role="main" class="sizable">
+        <main id="content" role="main" class="sizable">
             <div class="container">
 
                 <div class="row py-4 align-items-center">

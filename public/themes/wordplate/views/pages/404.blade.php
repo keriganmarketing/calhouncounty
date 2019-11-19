@@ -1,7 +1,7 @@
 <div class="projects-header header-image support">
 
 </div>
-<main role="main">
+<main id="content" role="main">
     <div class="container">
         <article>
             <header class="text-primary">

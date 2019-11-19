@@ -5,7 +5,7 @@
     @while (have_posts())
         {{ the_post() }}
         @include('partials.mast')
-        <main role="main">
+        <main id="content" role="main">
             <div class="container">
                 <article class="support">
                     <header>
