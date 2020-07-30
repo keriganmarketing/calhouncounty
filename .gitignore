@@ -1,11 +1,16 @@
-.DS_Store
+/node_modules
+/vendor
+# LocalValetDriver.php
 .env
-.idea
-.vagrant
-Homestead.json
-Homestead.yaml
-node_modules
-npm-debug.log
-Vagrantfile
-vendor
-node_modules
+
+public/languages
+# public/mu-plugins
+public/plugins/*
+!public/plugins/index.php
+public/upgrade
+public/uploads/
+public/wordpress
+public/wflogs
+public/logs
+public/.user.ini
+composer.lock

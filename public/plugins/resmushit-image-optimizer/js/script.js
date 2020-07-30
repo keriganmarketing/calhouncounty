@@ -21,20 +21,20 @@ jQuery("#rsmt-options-form").submit(function(){
 });
 
 
-    jQuery( ".list-accordion h4" ).on('click', function(){
-    	if(jQuery(this).parent().hasClass('opened')){
-			jQuery(".list-accordion ul").slideUp();
-			jQuery('.list-accordion').removeClass('opened');
+jQuery( ".list-accordion h4" ).on('click', function(){
+	if(jQuery(this).parent().hasClass('opened')){
+		jQuery(".list-accordion ul").slideUp();
+		jQuery('.list-accordion').removeClass('opened');
 
-    	} else {
-			jQuery(".list-accordion ul").slideDown();
-			jQuery('.list-accordion').addClass('opened');
-		}
-    });
+	} else {
+		jQuery(".list-accordion ul").slideDown();
+		jQuery('.list-accordion').addClass('opened');
+	}
+});
 
 updateDisabledState();
 optimizeSingleAttachment();
-
+removeBackupFiles();
 
 
 /** 
@@ -115,8 +115,7 @@ function resmushit_bulk_resize(container_id) {
 					var images = JSON.parse(response);			
 					if (images.nonoptimized.length > 0) {	
 						bulkTotalimages = images.nonoptimized.length;
-
-						
+						target.html('<div class="loading--bulk"><span class="loader"></span><br />' + bulkTotalimages + ' attachment(s) found, starting optimization...</div>');
 						flag_removed = false;
 						//start treating all pictures
 						resmushit_bulk_process(images.nonoptimized, 0);
@@ -152,7 +151,8 @@ function updateStatistics() {
  * ajax post to disabled status (or remove)
  */
 function updateDisabledState() {
-	jQuery('.rsmt-trigger--disabled-checkbox').change(function(){
+	jQuery(document).delegate(".rsmt-trigger--disabled-checkbox","change",function(e){
+	    e.preventDefault();
 		var current = this;
 		jQuery(current).addClass('rsmt-disable-loader');
 		jQuery(current).prop('disabled', true);
@@ -191,25 +191,48 @@ function updateDisabledState() {
  * ajax to Optimize a single picture
  */
 function optimizeSingleAttachment() {
-	jQuery('.rsmt-trigger--optimize-attachment').each(function(){
-		jQuery(this).on('mouseup', function(e){
+	jQuery(document).delegate(".rsmt-trigger--optimize-attachment","mouseup",function(e){
+	    e.preventDefault();
+		var current = this;
+		jQuery(current).val('Optimizing...');
+		jQuery(current).prop('disabled', true);
+		var disabledState = jQuery(current).is(':checked');
+		var postID = jQuery(current).attr('data-attachment-id');
+		jQuery.post(
+			ajaxurl, { 
+				action: 'resmushit_optimize_single_attachment',
+				data: {id: postID}
+			}, 
+			function(response) {
+				var statistics = jQuery.parseJSON(response);
+				jQuery(current).parent().empty().append('Reduced by ' + statistics.total_saved_size_nice + ' (' + statistics.percent_reduction + ' saved)');
+			}
+		);
+	});
+}
+
+
+/** 
+ * ajax to Optimize a single picture
+ */
+function removeBackupFiles() {
+	jQuery(document).delegate(".rsmt-trigger--remove-backup-files","mouseup",function(e){
+		if ( confirm( "You're about to delete your image backup files. Are you sure to perform this operation ?" ) ) {
+   
+		    e.preventDefault();
 			var current = this;
-			jQuery(current).val('Optimizing...');
+			jQuery(current).val('Removing backups...');
 			jQuery(current).prop('disabled', true);
-			var disabledState = jQuery(current).is(':checked');
-			var postID = jQuery(current).attr('data-attachment-id');
 			jQuery.post(
 				ajaxurl, { 
-					action: 'resmushit_optimize_single_attachment',
-					data: {id: postID}
+					action: 'resmushit_remove_backup_files'
 				}, 
 				function(response) {
-					var statistics = jQuery.parseJSON(response);
-					jQuery(current).parent().empty().append('Reduced by ' + statistics.total_saved_size_nice + ' (' + statistics.percent_reduction + ' saved)');
+					var data = jQuery.parseJSON(response);
+					jQuery(current).val(data.success + ' backup files successfully removed');
+					setTimeout(function(){ jQuery(current).parent().parent().slideUp() }, 3000);
 				}
 			);
-
-    		e.preventDefault();
-		});
+		}
 	});
 }

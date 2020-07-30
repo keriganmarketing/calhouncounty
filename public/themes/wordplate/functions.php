@@ -5,8 +5,12 @@ declare(strict_types=1);
 use KeriganSolutions\KMATeam\Team;
 use KeriganSolutions\KMAContactInfo\ContactInfo;
 
+(new KMA\Modules\KMAHelpers\Plate())->use();
+(new KMA\Modules\KMAServices\SocialIcons())->use();
+(new KMA\Modules\KMAServices\Slider())->use();
+
 // Register plugin helpers.
-require template_path('includes/plugins/plate.php');
+// require template_path('includes/plugins/plate.php');
 require template_path('includes/plugins/theme-setup.php');
 require template_path('includes/plugins/acf-page-fields.php');
 require('post-types/business-listing.php');
@@ -21,12 +25,7 @@ require('taxonomies/team-category.php');
     'parent' => 'group_contact_info',
 ])->use();
 
-$socialLinks = new KeriganSolutions\SocialMedia\SocialSettingsPage();
-if (is_admin()) {
-    $socialLinks->createPage();
-}
-
-new KeriganSolutions\KMASlider\KMASliderModule();
+// new KeriganSolutions\KMASlider\KMASliderModule();
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

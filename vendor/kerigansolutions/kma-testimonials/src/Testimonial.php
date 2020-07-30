@@ -98,7 +98,7 @@ class Testimonial
         add_action('init', [$this, 'testimonial_init']);
         add_filter('testimonial_updated_messages', [$this, 'testimonial_updated_messages']);
         if (function_exists('acf_add_local_field_group')) {
-            add_action('acf/init', [$this, 'registerFields']);
+            add_action('init', [$this, 'registerFields']);
         }
     }
 
@@ -134,6 +134,7 @@ class Testimonial
             $testimonial->byline = get_field('byline', $testimonial->ID);
             $testimonial->featured = get_field('featured', $testimonial->ID);
             $readmore = '... <a href="/testimonials/#' . $testimonial->ID . '">read more.</a>';
+            $testimonial->excerpt = ($truncate > 0 ? wp_trim_words($testimonial->post_content, $truncate, '...') : '');
             $testimonial->truncate = ($truncate > 0 ? wp_trim_words($testimonial->post_content, $truncate, $readmore) : '');
             $testimonialArray[] = $testimonial;
         }

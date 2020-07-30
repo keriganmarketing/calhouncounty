@@ -1,70 +1,70 @@
-=== Speed Booster Pack ===
-Contributors: machothemes, silkalns
-Donate link:
-Tags: speed, optimization, performance, scripts to the footer, google libraries, font awesome cdn, defer parsing of javascript, remove query strings, lazy load images, gtmetrix, google pageSpeed, yslow, eliminate external render-blocking javascript and css, compression, async, render-blocking css
-Requires at least: 3.6
-Tested up to: 4.9
+=== Speed Booster Pack ⚡ PageSpeed Optimization Suite ===
+Plugin Name: Speed Booster Pack ⚡ PageSpeed Optimization Suite
+Contributors: optimocha, speedboosterpack
+Tags: speed, pagespeed, optimization, performance, cache
+Requires at least: 4.6
+Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 3.7
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 4.0.0
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-A light, frequently updated and easy to use plugin to make your site load faster and score higher on Google PSI.
+PageSpeed optimization is vital for SEO: A faster website equals better conversions. Optimize & cache your site with this smart plugin!
 
 == Description ==
 
-A short video about how Speed Booster pack can help actually increase a website's score in Google PageSpeed Insights:
+WordPress is, hands down, the most popular content management system in the world. But like all giants, WordPress gets bigger and bigger every release; and it needs you to stay healthy and fast. Otherwise, your website can get slower and nobody likes slow websites. *NOBODY*. Not only your visitors hate your website, but also search engines (especially Google) penalizes you and drop your search engine rankings.
 
-https://www.youtube.com/watch?v=u0G6pk2mX4M
+Improving your site's speed will get you a better score on major speed testing services such as [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/), [GTmetrix](https://gtmetrix.com/), [Pingdom](https://tools.pingdom.com/), [WebPageTest](https://www.webpagetest.org/) and will also improve your overall site's usability. This will help Google and other search engines to rank your site higher in search results thus sending more traffic.
 
-**Speed Booster Pack is a lightweight, frequently updated, easy to use and well supported plugin which allows you to improve your website's loading speed.**
+**Speed Booster Pack** is maintained & operated by **[Optimocha](https://optimocha.com/)**, a company that offers special speed optimization services filled with people who *obsess* about speed!
 
-Improving your site's speed will get you a better score on major speed testing services such as [Google PageSpeed](http://developers.google.com/speed/pagespeed/insights/), [GTmetrix](http://gtmetrix.com/), [YSlow](https://developer.yahoo.com/yslow/), [Pingdom](http://tools.pingdom.com/fpt/), [Webpagetest](http://www.webpagetest.org/) and will also improve your overall site's usability. This will persuade Google and other search engines to rank your site higher in search results thus sending more traffic.
+### Benefits of Speed Booster Pack
 
-= Why Site Speed Is Important? =
+Each second of delay can cause up to 20% loss in conversion rates ([source: Google](https://web.dev/why-speed-matters/)). "Conversion" means *converting* visitors to something more than a "visitor": leads, customers, subscribers, followers... you name it.
 
-Visitors usually close a website if it doesn't load in a few seconds and the slower a site loads the greater the chances are that the visitors will leave. And you don't want that to happen, do you? :-)
-Speed Booster Pack is a plugin that can help you speed up your website by tweaking different options.
+You might lose more than half of your visitors if your website loads **slower than three seconds**! ([source: Google again](https://www.blog.google/products/admanager/the-need-for-mobile-speed/)) More than half of your potential customers might get back to the search results page and navigate to your competitor. This is a huge problem, and it's hugely overlooked among other SEO-related concerns. People don't realize how important speed is, in the eyes of search engines.
 
-= Main Plugin Features =
+That's where Speed Booster Pack comes in: With its ever-evolving codebase, Speed Booster Pack aims to increase your site performance, page load times and PageSpeed (Lighthouse) scores! Optimocha, the company behind Speed Booster Pack, has a team with a pathological obsession for speed; so you can be sure that your site will be in good hands.
 
-* **Eliminate external render-blocking javascript and css** in above-the-fold content.
-* **Move scripts to the footer** to improve page loading speed.
-* **Load CSS asynchronously** to render your page more quickly and get a higher score on the major speed testing services.
-* **Minify and inline all CSS styles and move them to the footer** to eliminate external render-blocking CSS and optimize CSS delivery.
-* ** Minify HTML and JavaScript to increase your page load speed.
-* **Change image compression level** to keep file sizes smaller; Change JPG quality.
-* **Load javascript files from Google Libraries** rather than serving them from your WordPress install directly, to reduce latency, increase parallelism and improve browser caching.
-* **Defer parsing of javascript files** to reduce the initial load time of your page.
-* **Remove query strings from static resources** to improve your speed scores.
-* **Remove extra Font Awesome stylesheets** added to your theme by certain plugins, if *Font Awesome* is already used in your theme.
-* **Remove junk header tags** to clean up your WordPress Header.
-* **Display page loading time** in the plugin options page.
-* **Display the number of executed SQL queries** in the plugin options page.
-* **Display the Peak Memory Used** in the plugin options page.
-* **Exclude scripts** from being moved to the footer or defered.
-* **Remove RSD Link** if you are not using a Weblog Client or some 3rd party sites/programs that use the XML-RPC request formats.
-* **Remove WordPress Shortlink**
-* **Remove the WordPress Version** this option is added for security reasons and cleaning the header.
-* **Remove all rss feed links** to cleanup your WordPress header.
+### How to optimize PageSpeed scores with Speed Booster Pack
 
-* For complete usage instructions visit [Plugin Documentation](http://docs.machothemes.com/category/118-speed-booster)
+With our huge set of features, of course!
 
+🌟 **Caching**: Cache your pages into static HTML files, reduce database queries, get a faster website almost immediately. What's not to love about caching?
+⭐ **Custom Code Manager**: Hey, you know that huge live chat widget, or the weird script that you really, *really* have to load? Well, you can probably delay them so the rest of the page can load first.
+⭐ **Optimize Google Fonts**: Did you know that there are better ways to load Google fonts? We like to brag about finding one of the best ways.
+⭐ **Localize Google Analytics & Tag Manager**: Tracker scripts aren't the worst things that'll slow your pages down, but they cause the most "recommendations". Localizing Google Analytics and/or Google Tag Manager is a good idea to speed up your website then, right? Right?
+🌟 **Lazy Load**: It's a disheartening issue that page speed tools encourage laziness... Just kidding, we love being lazy. And search engines will love your pages when you enable lazy loading for images, videos and iframes (except for the above-the-fold stuff, trust us).
+🌟 **Optimize JavaScript**: You know that totally-not-cryptic "Remove Render-Blocking JavaScript" recommendation? Speed Booster Pack can help defer them all until after the whole HTML is rendered, or at least move all scripts to footer. Works like a charm.
+⭐ **Optimize CSS**: Who needs all those different CSS files when you can inline them all into your page source? Especially when your CSS footprint is so small?
+🌟 **Preload Assets**: Have some fonts that load in all your pages, or a script, or some CSS files? Preloading them will help modern browsers serve your pages way faster!
+⭐ **Enable CDN**: Integrate your content delivery network to your website by rewriting all static asset URLs with your CDN domain.
+⭐ **Cloudflare Integration**: Connect to your Cloudflare account so you can clear your cache every time your page cache is cleared.
+🌟 **Plugin-specific Optimizations**: Disable WooCommerce cart fragments, dequeue Jetpack's devicepx script, and more to come!
+🌟 **Dequeue Core Scripts/Styles**: Dashicons, jQuery Migrate, emoji script, post embed script... If you don't need them, you can now choose to prevent them from loading in the first place... which can get you to the first place on your Google SERPs.
+⭐ **Declutter HEAD**: Do you think all that useless junk in your <head> should be gone? Us too! You know what they say: A clear <head> works faster.
+⭐ **Other Features**: Minify HTML, enable instant.page, trim query strings, disable self pingbacks, optimize the Heartbeat API, set a limit for post revisions, change autosave interval... Did we forget anything?
 
-Future Development:
+We're constantly working on new features so stay tuned for more and more on every major release!
 
-* Enable compression option.
-* Leverage browser caching.
-* Option to disable specific plugin actions on specific pages directly via the page edit screen metabox.
-* Option to keep specific scripts in the header, since there are many javascript-based plugins scripts, that rely on jQuery to be loaded prior to the HTML elements.
+For complete usage instructions, you can visit the [Speed Booster Pack documentation](https://speedboosterpack.com/docs/) page.
 
-= Recommended Plugins =
+### Translators are always welcome & always rewarded!
 
-* [Simple Author Box](http://wordpress.org/plugins/simple-author-box/) - A simple but cool author box with social icons.
+More than half of WordPress users don't speak English, and missing out so much! That's why Optimocha is always looking for volunteers to [translate Speed Booster Pack](https://translate.wordpress.org/projects/wp-plugins/speed-booster-pack/) so more and more people can benefit from its goodness. Oh, and we reward the people who help us! Reach out to us to become a translation editor in your language, and get rewarded with special discount codes of our services!
 
-**About us:**
-We are a young team of WordPress aficionados who love building WordPress plugins & <a href="https://www.machothemes.com/" target="_blank" title="Premium WordPress themes">Premium WordPress themes</a> over on our theme shop. We’re also blogging and wish to help our users find the <a href="https://www.machothemes.com/blog/best-cheap-wordpress-hosting/" target="_blank" title="Best Cheap WordPress Hosting">Best Cheap WordPress Hosting</a> available on the market. Check out our blog. 
+### About [Optimocha](https://optimocha.com/) Speed Optimization Services
 
+Speed optimization plugins might do a great job at optimizing your website and increasing your PageSpeed scores, but even they can't perform well on websites with poor setups. There are lots of factors to think about when it comes to web performance optimization. That's where we, as Optimocha, come in: We log in to your website; create a specialized optimization report considering all your plugins, your theme settings, your hosting environment and your whole content; then we get our hands dirty to get your website as fast as possible. To learn more about our services and get in touch with us, here are some links:
+
+* [One-time speed optimization services](https://optimocha.com/speed-optimization-for-wordpress/)
+* [Monthly speed optimization & maintenance services](https://optimocha.com/monthly-wordpress-optimization-maintenance/)
+* [Contact Optimocha](https://optimocha.com/contact/)
+
+### Disclaimer
+
+Even though the plugin works perfectly well on most WordPress websites, it's not perfect. We just need to make sure that we're on the same page: This plugin, no matter how hard we work on it, might have bugs in it and your site has an off chance to have issues with the plugin. It doesn't do anything permanent to your pages' source codes, so deactivating the plugin and clearing your browser & server caches will solve any kind of issue it might cause. Other than that, we won't be able to take responsibility if something else clashes with Speed Booster Pack.
 
 == Installation ==
 
@@ -72,169 +72,57 @@ We are a young team of WordPress aficionados who love building WordPress plugins
 2. Unzip the zip file contents.
 3. Upload the `speed-booster-pack` folder to the `/wp-content/plugins/` directory.
 4. Activate the plugin through the 'Plugins' menu in WordPress.
-5. A new sub menu item `Speed Booster Pack` will appear in your main Settings menu.
+5. A new sub menu item `Speed Booster` will appear in your main Settings menu.
+
+== Frequently Asked Questions ==
+
+For complete usage instructions, you can visit the [Speed Booster Pack documentation](https://speedboosterpack.com/docs/) page.
+
+= I like your plugin, how do I thank you? =
+
+We don't accept any donations, if that's what you're asking! 😊 But we do like to have our users [review the plugin](https://wordpress.org/support/plugin/speed-booster-pack/reviews/#new-post) with a fair star rating. And we always appreciate you recommending our plugin to other people!
+
+= I have a bug report! =
+
+We love you already! ❤ Please issue your bug report [over GitHub](https://github.com/optimocha/speed-booster-pack/) so we can get started squashing it. **If it's a legitimate bug, you'll be awarded with discount coupons to our services!**
+
+= This plugin broke my site! =
+
+It's possible that the theme or your plugins might be using some old code that isn't compatible with Speed Booster Pack's code. If that's the case, try disabling some features in the Advanced tab. If that doesn't work, try deactivating the plugin and clear your browser & server caches. If that does the trick, reach out to us so we can help you. If the site is *still* broken, though, there's obviously another reason for your site breaking because everything Speed Booster Pack does, it does it on-the-fly. Deactivating the plugin (and clearing your caches) will make everything go away.
+
+= I need more than Speed Booster Pack! =
+
+Our main business is special speed optimization services, tailored for every website we work on. [On our website](https://optimocha.com/), you can review our speed optimization packages and contact us.
+
+= How often do you update the plugin? =
+
+All the time! We're always looking for new ways to get this plugin to a better state: We code new features, we fix existing bugs, and we try our best to make Speed Booster Pack more and more popular. And we always appreciate a helping hand: If you've got a new feature to offer, [you can suggest it over here](https://speedboosterpack.com/contact/). If we eventually make it happen and/or you help us make it happen, you'll be rewarded with handsome discount coupons or even free speed optimization services!
 
 == Screenshots ==
-1. Plugin options page, simple view (v2.5)
+1. Plugin options page
+
+== Upgrade Notice ==
+
+Speed Booster Pack v4.0 is written from scratch! With the new options framework, your current options will be migrated to the new codebase but make sure you review your options after updating the plugin to the latest version.
 
 == Changelog ==
 
-= 3.7.1 = 
-* Temporarily remove lazyLoad as the bundled JS files, namely, CrazyLazy don't seem to be working properly with the latest jQuery version.
+= 4.0.0 =
 
-= 3.7 =
+*Release Date: 18 July 2020*
 
-* Bumped FontAwesome bundled CSS version from 4.1 -> 4.7 and changed to using MaxCDN
-* (Hopefully) fixed the issue affecting relative/absolute paths when using minify CSS
-* Wrongfully used escape functions
-* Should use wp_scripts-> done instead of wp_scripts->queue
-* Update Use Google Libraries 3rd party dependency
-* Can't be fully translated because of one wrong text-domain string
-* Change UI to WordPress Core UI
-* Added plugin uninstall feedback
-* Added plugin (dedicated) support tab && moved plugin feedback section only to support tab
-* Added tooltips to all fields
-* Re-worked the page load / site stats bar & added a bit more info
-* Removed the old way of handling the uninstall hook & deletion of the sbp_integer variable from SBP when you uninstall it. In case you change your mind & reactivate the plugin, your former image compression value's there waiting for you.
-* Addressed a small issue with the "Exclude scripts from being moved to footer" display
-* Made all of the plugin's link send to MachoTheme's docs instead of Tiguan
-* Updated jQuery UI CSS to latest version & included the PNG sprites that come by default with jQuery UI, eliminating some back-end "asset not found" errors
-* Removed unused files
-* Added feature: "Remove Emoji scripts"
-* Added feature: "Disable XML-RPC" pings
-* Added default values. Now it's even easier to get speed boosts without actually having to toggle stuff
-* Removed po/mo files from SBP since translations are now handled here: https://translate.wordpress.org/projects/wp-plugins/speed-booster-pack
-* jQuery will always be enqueued in the header, as a security/fallback measure.
-* Fixed the way "exclude scripts from footer" works. It's now usable and only requires the script handle. Added backwards compat as well
-* Fixed the way script deferring works, it's now actually usable. Introduced a filter: sbp_exclude_defer_scripts so users can exclude more than 4 scripts from being deferred
-* Rewrote the way the plugin was handling removal of query strings from assets
-* Automatically exclude certain known CSS assets from being async/minifed and/or moved from header (ex: dashicons / admin-bar)
-* Full list of changes for v3.7, here: https://github.com/MachoThemes/speed-booster-pack/milestone/1?closed=1
+**Speed Booster Pack v4.0 is written from scratch!** Almost all of our codebase is rewritten, great new features are added, and we have an awesome new options panel to show them all!
 
-= 3.6.1 =
- * Added a section for feedback in the plugin's dashboard
+* **NEW - Caching**: With this new feature, you can now enable page and browser caching which will greatly reduce database queries and help browsers cache static assets more efficiently.
+* **NEW - JavaScript deferring**: You can now choose to move JS to the footer **or** defer parsing of JavaScript.
+* **NEW - Custom Code Manager**: You can now add custom JavaScript code and make them run deferred.
+* **NEW - Cloudflare Integration**: User your Cloudflare API key to connect your caching system to Cloudflare, so each time your cache is cleared, Cloudflare's cache will be purged as well.
+* **NEW - Analytics Localizer**: You can now serve Google Analytics or Google Tag Manager scripts (analytics.js, gtag.js, or gtm.js) from your own server, and still keep it working.
+* **NEW**: The brand new admin panel created with the Codestar Framework will help you review and understand Speed Booster Pack's options more easily.
+* **Improved - Google Fonts optimization**: Our refactored code helps Google Fonts load even faster now.
+* **Improved - Compatibility**: Active plugins with features similar to Speed Booster Pack will throw a dismissible notice to warn the user to be careful about the overlapping features.
+* **Fixed**: The Preboost feature outputted code without the `crossorigin` attribute, which is now fixed.
+* **Fixed**: The lazy load feature caused mixed content warnings in some edge cases, which is now fixed.
+* **Updated**: Updated external libraries (lazyload.js and instantpage.js) to their latest versions.
 
-= 3.6 =
-* Changed contributors and fixed a few bugs. Plugin is now under new ownership.
-
-= 3.5 =
-* Fix compatibility with the CrazyLazy plugin.
-
-= 3.4 =
-* Added an option to increase your page load speed by minifying JavaScript and HTML. Removed option to remove RSD Link, since its impact on improving speed was insignificant.
-
-= 3.3 =
-* Fix Lazy Load CSS problem.
-
-= 3.2 =
-* Added Lazy Load feature to improve the web page loading times of your images.
-
-= 3.1 =
-* Following requests from users, added back the option of excluding javascript elements.
-
-= 3.0 =
-* We removed the option of excluding javascript elements as this option falls page speed score, making this plugin almost useless. Also, these options were only for advanced users, for regular users, incorrect use these options could destabilize the entire site functionality.
-* We also removed the lazy load images option because it was outdated and broken. We'll come up with a new and updated solution soon.
-
-= 2.9 =
-* Added a new recommended features that can make your site load faster
-
-= 2.8 =
-* Fixed plugin options visibility issue
-
-= 2.7 =
-* All important options switched to off by default (on first plugin activation).
-
-= 2.6 =
-* Added Spanish translation by [Andrew Kurtis](http://www.webhostinghub.com/)
-
-= 2.5 =
-* Added option to exclude certain JS files from being moved to the footer.
-* Added option to exclude certain JS files from being defered.
-* Added a list of handles of all scripts and styles enqueued by your theme, useful for excluding options.
-* Removed FOUC option since is useless with W3 Total Cache.
-* Some visual changes on plugin options page.
-* Translation updated with the new strings.
-* Moved some admin inline scripts to js files.
-
-= 2.4 =
-* Fixed TypeError: $ is not a function when Prevent Flash of Unstyled Content (FOUC) option is active. Thanks to [@Marcio Duarte](http://profiles.wordpress.org/pagelab) for the [bug report](http://wordpress.org/support/topic/javascript-error-53).
-
-= 2.3 =
-* Added option to exclude certain CSS files from being loaded asynchronously.
-* Changed the position of the styles when they are inlined to the footer (before js files).
-* Added an experimental option to eliminate flash of unstyled content (FOUC) when all CSS styles are inlined to the footer.
-* Translations updated.
-
-= 2.2 =
-* Fixed option to disable all CSS Async features on mobile devices.
-* Fixed incompatibility with WPtouch plugin. Thanks to [@DevilIce](http://profiles.wordpress.org/devilice) for the [bug report](http://wordpress.org/support/topic/css-asynchronously-and-wptouch-issue).
-* Updated function wp_is_mobile() on lazy load images to really disabled this feature on mobile devices.
-
-= 2.1 =
-*Added an option to disable all CSS Async features on mobile devices, to avoid some appearance issues until finding a clean solution to fix it.
-
-= 2.0 =
-*Modified: amended previous except for the admin toolbar css to enqueue its stylesheets only if admin bar is showing, to not break the render blocking plugin option.
-
-= 1.9 =
-* Fix: breaking the SEO by Yoast plugin interface (perhaps as well as to others too). Thanks to [@JahLive](http://profiles.wordpress.org/jahlive) for the [bug report](http://wordpress.org/support/topic/yoast-wordpress-seo-broken-after-update).
-* Added an except for the admin toolbar css since the Load CSS asynchronously option removes its dashicons and stylesheets.
-
-
-= 1.8 =
-* Added option to load CSS asynchronously to render your page more quickly and get a higher score on the major speed testing services
-* Added option to inline and minify all CSS styles and move them to the header or to the footer, to eliminate external render-blocking CSS and optimize CSS delivery.
-* Added option to change the default image compression level, to help your pages load faster and keep file sizes smaller.
-* Added memory usage information and active plugins number in the plugin options page.
-* Replaced PHP version info with memory usage information (more useful).
-* Added Romanian translation and POT file. Translators are welcome!
-
-= 1.7 =
-* Fixed Lazy Load missed js.
-
-= 1.6 =
-* Fixed some errors and missed codes from plugin functions.
-
-= 1.5 =
-* Added Lazy Load feature to improve the web page loading times of your images.
-* Added an option to remove all rss feed links from WP Head.
-* Added plugin options informations to the footer, visible in page source(hidden in front end), useful for debugging.
-
-= 1.4 =
-* Added a new option to remove extra Font Awesome stylesheets added to your theme by certain plugins, if Font Awesome is already used in your theme.
-* Added a new option to remove WordPress Version Number.
-
-= 1.3 =
-* Fixed strict standards error: redefining already defined constructor for class.
-
-= 1.2 =
-* Modified the plugin version number variable in plugin options page.
-
-= 1.1 =
-* Modified Readme file
-
-= 1.0 =
-* Initial release
-
-== Page Load Stats ==
-
-Page Load Stats is a brief statistic displayed in the plugin options page. It displays your homepage loading speed (in seconds) and number of processed queries.
-
-**Page loading time** – the progress bar color will be:
-
-* *green* if the page load takes less than a second
-* *orange* when loading the page takes between 1 and 2 seconds
-* *red* if the page loading takes longer than 2 seconds
-
-**Number of executed queries** – the progress bar color will be:
-
-* *green* if there were less than 100 queries
-* *orange* if there were between 100 and 200 queries
-* *red* if the page required more than 200 queries
-
-== Credits ==
-
-* Thanks to [Jason Penney](http://jasonpenney.net/) for Google Libraries feature.
-* CSS option was implemented from Async JS and CSS plugin and updated to our plugin.
-* Credits for Lazy Load feature belongs to [pluginkollektiv](https://github.com/pluginkollektiv/crazy-lazy)
+*You can read the rest of the changelog on the [Speed Booster Pack documentation](https://speedboosterpack.com/docs/) page.

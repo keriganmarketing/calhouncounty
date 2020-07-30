@@ -47,23 +47,6 @@ if (!function_exists('base_path')) {
     }
 }
 
-if (!function_exists('info')) {
-    /**
-     * Retrieves information about the current site.
-     *
-     * @param string $show
-     * @param string $filter
-     *
-     * @see https://developer.wordpress.org/reference/functions/get_bloginfo
-     *
-     * @return string
-     */
-    function info(string $show = '', string $filter = 'raw'): string
-    {
-        return get_bloginfo($show, $filter);
-    }
-}
-
 if (!function_exists('mix')) {
     /**
      * Get the path to a versioned Mix file.
@@ -156,6 +139,27 @@ if (!function_exists('template_path')) {
         $path = $path && $path !== DIRECTORY_SEPARATOR ? '/'.$path : $path;
 
         return sprintf('%s%s', get_template_directory(), $path);
+    }
+}
+
+if (!function_exists('template_slug')) {
+    /**
+     * Get page template slug.
+     *
+     * @param int|\WP_Post|null $post
+     *
+     * @return string|null
+     */
+    function template_slug($post = null): ?string
+    {
+        if (!$post) {
+            return null;
+        }
+
+        $slug = get_page_template_slug($post);
+        $filename = pathinfo($slug)['filename'];
+
+        return $filename !== '' ? $filename : null;
     }
 }
 

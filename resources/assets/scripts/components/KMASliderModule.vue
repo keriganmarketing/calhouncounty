@@ -20,6 +20,9 @@
 </template>
 
 <script>
+require('es6-promise').polyfill();
+import axios from 'axios'
+
     export default {
         props: {
             category: {
@@ -54,7 +57,7 @@
                 }
             }
 
-            http.get("/wp-json/kerigansolutions/v1/slider" + request)
+            axios.get("/wp-json/kerigansolutions/v1/slider" + request)
                 .then(response => {
                     this.sliderData = response.data; 
                 });
