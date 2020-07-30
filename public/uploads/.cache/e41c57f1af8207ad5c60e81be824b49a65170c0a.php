@@ -8,4 +8,4 @@
             <button @click="increaseTextSize" class="btn btn-white round mx-1"><span class="sr-only">Make text bigger</span><i class="fa fa-plus" aria-hidden="true"></i></button> 
         </div>
     </div>
-</div>
+</div><?php /**PATH /home/forge/calhouncountygov.com/public/themes/wordplate/views/partials/textsizer.blade.php ENDPATH**/ ?>

@@ -5,11 +5,27 @@ class ContactInfo
 {
     public function addField(array $field)
     {
-        acf_add_local_field($field);
+        if ( function_exists( 'acf_add_local_field_group' ) ) {
+            acf_add_local_field($field);
+        }
 
         return $this;
     }
+
     public function use()
+    {
+        if ( function_exists( 'acf_add_local_field_group' ) ) {
+            add_action( 'init', [$this, 'addGenericFields'] );
+            add_action( 'init', [$this, 'addCustomFields'] );
+        }
+    }
+
+    public function addCustomFields()
+    {
+        // For extending
+    }
+
+    public function addGenericFields()
     {
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page(array(
@@ -21,6 +37,8 @@ class ContactInfo
                 'redirect' => false
             ));
         }
+
+        //field group
         acf_add_local_field_group(array(
             'key' => 'group_contact_info',
             'title' => 'Contact info',
@@ -41,7 +59,7 @@ class ContactInfo
             'hide_on_screen' => '',
         ));
 
-// title
+        // title
         acf_add_local_field(array(
             'key' => 'address',
             'label' => 'Address',
@@ -49,7 +67,8 @@ class ContactInfo
             'type' => 'textarea',
             'parent' => 'group_contact_info',
         ));
-// email
+
+        // email
         acf_add_local_field(array(
             'key' => 'email',
             'label' => 'Email',
@@ -57,7 +76,8 @@ class ContactInfo
             'type' => 'text',
             'parent' => 'group_contact_info',
         ));
-// local phone
+
+        // local phone
         acf_add_local_field(array(
             'key' => 'phone',
             'label' => 'Phone',
@@ -66,7 +86,7 @@ class ContactInfo
             'parent' => 'group_contact_info',
         ));
 
-// toll-free phone
+        // toll-free phone
         acf_add_local_field(array(
             'key' => 'toll_free_phone',
             'label' => 'Toll Free Phone',
@@ -74,7 +94,8 @@ class ContactInfo
             'type' => 'text',
             'parent' => 'group_contact_info',
         ));
-// toll-free phone
+
+        // fax
         acf_add_local_field(array(
             'key' => 'fax',
             'label' => 'Fax',
@@ -82,7 +103,8 @@ class ContactInfo
             'type' => 'text',
             'parent' => 'group_contact_info',
         ));
-// Image
+
+        // Image
         acf_add_local_field(array(
             'key' => 'image',
             'label' => 'Image',

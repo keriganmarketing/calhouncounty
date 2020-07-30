@@ -36,10 +36,8 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-define('WP_CACHE', true);
-define( 'WPCACHEHOME', '/home/forge/calhouncountygov.com/public/plugins/wp-super-cache/' );
 $application = new WordPlate\Application(
-    realpath(__DIR__)
+    realpath(__DIR__.'/../')
 );
 
 /*

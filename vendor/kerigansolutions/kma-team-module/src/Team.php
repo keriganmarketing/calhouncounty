@@ -61,6 +61,10 @@ class Team
     {
         add_action('init', [$this, 'team_init']);
         add_filter('team_updated_messages', [$this, 'team_updated_messages']);
+
+        add_action( 'init', [$this, 'createTaxonomy'] );
+        add_filter( 'term_updated_messages', [$this, 'taxonomyUpdated'] );
+
         if (function_exists('acf_add_local_field_group')) {
             add_action('acf/init', [$this, 'registerFields']);
         }
@@ -69,7 +73,7 @@ class Team
     /*
      * Query WP for slides
      */
-    public function queryTeam($limit = -1)
+    public function queryTeam($limit = -1, $department = null)
     {
         $request = [
             'posts_per_page' => $limit,
@@ -79,6 +83,18 @@ class Team
             'post_type' => 'team',
             'post_status' => 'publish',
         ];
+
+        if ($department != null) {
+            $taxquery = [
+                [
+                    'taxonomy'         => 'department',
+                    'field'            => 'slug',
+                    'terms'            => $department,
+                    'include_children' => false,
+                ],
+            ];
+            $request['tax_query'] = $taxquery;
+        }
 
 
         $team = get_posts($request);
@@ -110,7 +126,8 @@ class Team
     public function getTeam($request)
     {
         $limit = $request->get_param('limit');
-        return rest_ensure_response($this->queryTeam($limit));
+        $department = $request->get_param('department');
+        return rest_ensure_response($this->queryTeam($limit, $department));
     }
 
     /**
@@ -207,6 +224,77 @@ class Team
             ),
 		/* translators: %s: post permalink */
             10 => sprintf(__($this->singularName . ' draft updated. <a target="_blank" href="%s">Preview ' . $this->singularName . '</a>', 'wordplate'), esc_url(add_query_arg('preview', 'true', $permalink))),
+        );
+
+        return $messages;
+    }
+
+    /**
+     * Registers the `Department` taxonomy,
+     * for use with 'slide'.
+     */
+    public function createTaxonomy()
+    {
+        register_taxonomy( 'department', array( 'team' ), array(
+            'hierarchical'      => false,
+            'public'            => true,
+            'show_in_nav_menus' => true,
+            'show_ui'           => true,
+            'show_admin_column' => false,
+            'query_var'         => true,
+            'rewrite'           => true,
+            'capabilities'      => array(
+                'manage_terms'  => 'edit_posts',
+                'edit_terms'    => 'edit_posts',
+                'delete_terms'  => 'edit_posts',
+                'assign_terms'  => 'edit_posts',
+            ),
+            'labels'            => array(
+                'name'                       => __( 'Departments', 'kerigansolutions' ),
+                'singular_name'              => _x( 'Department', 'taxonomy general name', 'kerigansolutions' ),
+                'search_items'               => __( 'Search Departments', 'kerigansolutions' ),
+                'popular_items'              => __( 'Popular Departments', 'kerigansolutions' ),
+                'all_items'                  => __( 'All Departments', 'kerigansolutions' ),
+                'parent_item'                => __( 'Parent Department', 'kerigansolutions' ),
+                'parent_item_colon'          => __( 'Parent Department:', 'kerigansolutions' ),
+                'edit_item'                  => __( 'Edit Department', 'kerigansolutions' ),
+                'update_item'                => __( 'Update Department', 'kerigansolutions' ),
+                'view_item'                  => __( 'View Department', 'kerigansolutions' ),
+                'add_new_item'               => __( 'New Department', 'kerigansolutions' ),
+                'new_item_name'              => __( 'New Department', 'kerigansolutions' ),
+                'separate_items_with_commas' => __( 'Separate departments with commas', 'kerigansolutions' ),
+                'add_or_remove_items'        => __( 'Add or remove departments', 'kerigansolutions' ),
+                'choose_from_most_used'      => __( 'Choose from the most used departments', 'kerigansolutions' ),
+                'not_found'                  => __( 'No Departments found.', 'kerigansolutions' ),
+                'no_terms'                   => __( 'No Departments', 'kerigansolutions' ),
+                'menu_name'                  => __( 'Departments', 'kerigansolutions' ),
+                'items_list_navigation'      => __( 'Departments list navigation', 'kerigansolutions' ),
+                'items_list'                 => __( 'Departments list', 'kerigansolutions' ),
+                'most_used'                  => _x( 'Most Used', 'Department', 'kerigansolutions' ),
+                'back_to_items'              => __( '&larr; Back to Departments', 'kerigansolutions' ),
+            ),
+            'show_in_rest'      => true,
+            'rest_base'         => 'department',
+            'rest_controller_class' => 'WP_REST_Terms_Controller',
+        ) );
+    }
+
+    /**
+     * Sets the post updated messages for the `Department` taxonomy.
+     *
+     * @param  array $messages Post updated messages.
+     * @return array Messages for the `Department` taxonomy.
+     */
+    public function taxonomyUpdated( $messages )
+    {
+        $messages['Department'] = array(
+            0 => '', // Unused. Messages start at index 1.
+            1 => __( 'Department added.', 'kerigansolutions' ),
+            2 => __( 'Department deleted.', 'kerigansolutions' ),
+            3 => __( 'Department updated.', 'kerigansolutions' ),
+            4 => __( 'Department not added.', 'kerigansolutions' ),
+            5 => __( 'Department not updated.', 'kerigansolutions' ),
+            6 => __( 'Departments deleted.', 'kerigansolutions' ),
         );
 
         return $messages;

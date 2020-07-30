@@ -10,4 +10,4 @@
             <p>The page you've requested does not exist.</p>
         </article>
     </div>
-</main>
+</main><?php /**PATH /home/forge/calhouncountygov.com/public/themes/wordplate/views/pages/404.blade.php ENDPATH**/ ?>

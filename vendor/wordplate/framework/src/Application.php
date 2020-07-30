@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace WordPlate;
 
 use Dotenv\Dotenv;
-use Dotenv\Exception\InvalidPathException;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -41,20 +40,15 @@ final class Application extends Container
     /**
      * Create a new application instance.
      *
-     * @param string $publicPath
+     * @param string $basePath
      *
      * @return void
      */
-    public function __construct(string $publicPath)
+    public function __construct(string $basePath)
     {
-        $this->publicPath = $publicPath;
-        $this->pluginLoader = new PluginLoader();
+        $this->basePath = $basePath;
 
-        try {
-            (new Dotenv($this->getBasePath()))->load();
-        } catch (InvalidPathException $e) {
-            //
-        }
+        Dotenv::create($this->basePath)->safeLoad();
 
         static::setInstance($this);
     }
@@ -66,9 +60,6 @@ final class Application extends Container
      */
     public function run()
     {
-        // The WordPress environment.
-        define('WP_ENV', env('WP_ENV', 'production'));
-
         // For developers: WordPress debugging mode.
         $debug = env('WP_DEBUG', false);
         define('WP_DEBUG', $debug);
@@ -130,7 +121,8 @@ final class Application extends Container
         }
 
         // Load the must-use plugins.
-        $this->pluginLoader->load();
+        $pluginLoader = new PluginLoader();
+        $pluginLoader->load();
     }
 
     /**
@@ -140,23 +132,7 @@ final class Application extends Container
      */
     public function getBasePath(): string
     {
-        if (is_null($this->basePath)) {
-            return realpath($this->publicPath.'/../');
-        }
-
         return $this->basePath;
-    }
-
-    /**
-     * Get the base path for the application.
-     *
-     * @param string $basePath
-     *
-     * @return void
-     */
-    public function setBasePath(string $basePath)
-    {
-        $this->basePath = $basePath;
     }
 
     /**
@@ -166,6 +142,10 @@ final class Application extends Container
      */
     public function getPublicPath(): string
     {
+        if (is_null($this->publicPath)) {
+            return $this->basePath.DIRECTORY_SEPARATOR.'public';
+        }
+
         return $this->publicPath;
     }
 

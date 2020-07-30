@@ -51,4 +51,4 @@
             </div>
         </div>
     </div>
-</div>
+</div><?php /**PATH /home/forge/calhouncountygov.com/public/themes/wordplate/views/partials/buttongallery.blade.php ENDPATH**/ ?>

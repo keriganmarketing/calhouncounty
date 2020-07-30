@@ -24,4 +24,5 @@
     <mobile-menu @itemclicked="itemClicked" id="mobilemenu" :mobile-nav="<?php echo e(website_menu('mobile-navigation')); ?>" class="navbar-nav m-auto" ></mobile-menu>
 </div>
 <div class="top-pad"></div>
-<?php echo $__env->make('partials.textsizer', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('partials.textsizer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php /**PATH /home/forge/calhouncountygov.com/public/themes/wordplate/views/partials/header.blade.php ENDPATH**/ ?>

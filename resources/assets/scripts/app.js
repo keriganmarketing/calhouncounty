@@ -1,18 +1,15 @@
-import "babel-polyfill"
-window.Vue = require('vue')
-window.axios = require("axios")
-import { cacheAdapterEnhancer, throttleAdapterEnhancer } from 'axios-extensions';
+import Vue from 'vue'
 
-window.http = axios.create({
-	baseURL: '/',
-	headers: { 'Cache-Control': 'no-cache' },
-	adapter: throttleAdapterEnhancer(axios.defaults.adapter, { threshold: 2 * 1000 })
-});
+//navigation menus
+Vue.component('main-menu', require('./components/navigation/MainNavigationMenu.vue').default);
+Vue.component('mobile-menu', require('./components/navigation/MobileNavigationMenu.vue').default);
+Vue.component('footer-menu', require('./components/navigation/FooterNavigationMenu.vue').default);
 
-require('./load-components')
-
-import {VueMasonryPlugin} from 'vue-masonry';
-Vue.use(VueMasonryPlugin)
+//plugins
+Vue.component('social-icons', require('./components/SocialMediaIcons.vue').default);
+Vue.component('kma-slider', require('./components/KMASliderModule.vue').default);
+Vue.component('fit-text', require('./components/FitText.vue').default);
+Vue.component('search-box', require('./components/SearchBox.vue').default);
 
 const app = new Vue({
     el: '#app',
