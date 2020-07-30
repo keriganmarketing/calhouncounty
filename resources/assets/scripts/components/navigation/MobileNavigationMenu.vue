@@ -70,6 +70,10 @@
         position: fixed;
         overflow-y: scroll;
 
+        @media screen and (min-width: 768px){
+            margin-top: 100px;
+        }
+
         ul.navbar-nav li button,
         ul.navbar-nav li a {
             font-size: 18px;
