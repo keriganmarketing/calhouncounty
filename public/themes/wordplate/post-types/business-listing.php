@@ -278,7 +278,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'key' => 'field_5bb3e3107f673',
 				'label' => 'Photo',
 				'name' => 'photo',
-				'type' => 'image_crop',
+				'type' => 'image',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => 0,
@@ -287,12 +287,10 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'crop_type' => 'hard',
 				'target_size' => 'custom',
 				'width' => 400,
 				'height' => 300,
 				'preview_size' => 'medium',
-				'force_crop' => 'yes',
 				'save_in_media_library' => 'yes',
 				'retina_mode' => 'no',
 				'save_format' => 'object',
@@ -368,6 +366,7 @@ function business_listing_shortcode( $atts ) {
 
 	$output = '<div class="row business-listings">';
 	foreach(getBusinessListings($a['category']) as $listing){
+		echo $listing->photo;
 		$output .= '
 		<div class="col-md-6 col-lg-4 mb-4">
 			<div class="card text-center full-height">
