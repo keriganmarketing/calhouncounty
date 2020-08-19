@@ -162,7 +162,8 @@ class Testimonial
             '/testimonials',
             [
                 'methods' => 'GET',
-                'callback' => [$this, 'getTestimonials']
+                'callback' => [$this, 'getTestimonials'],
+                'permission_callback' => '__return_true'
             ]
         );
     }
