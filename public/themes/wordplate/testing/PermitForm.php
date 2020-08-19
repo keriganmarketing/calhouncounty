@@ -35,7 +35,8 @@ class PermitForm
             '/submit-permit-form',
             [
                 'methods' => 'POST',
-                'callback' => [$this, 'submitPermitForm']
+                'callback' => [$this, 'submitPermitForm'],
+                'permission_callback' => '__return_true'
             ]
         );
     }
