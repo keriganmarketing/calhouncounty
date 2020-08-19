@@ -907,20 +907,20 @@
     },
     {
         "name": "kerigansolutions/kma-slider-module",
-        "version": "0.4",
-        "version_normalized": "0.4.0.0",
+        "version": "1.3.1",
+        "version_normalized": "1.3.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/kerigansolutions/kma-slider-module.git",
-            "reference": "b1042284a777f8fcc55393718830ebf9b08dfd43"
+            "reference": "e187ed7a55f4f0b2af340bd14cae7363dd729535"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/b1042284a777f8fcc55393718830ebf9b08dfd43",
-            "reference": "b1042284a777f8fcc55393718830ebf9b08dfd43",
+            "url": "https://api.github.com/repos/kerigansolutions/kma-slider-module/zipball/e187ed7a55f4f0b2af340bd14cae7363dd729535",
+            "reference": "e187ed7a55f4f0b2af340bd14cae7363dd729535",
             "shasum": ""
         },
-        "time": "2018-07-11T18:38:25+00:00",
+        "time": "2020-08-18T14:13:12+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
