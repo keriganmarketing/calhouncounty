@@ -366,7 +366,6 @@ function business_listing_shortcode( $atts ) {
 
 	$output = '<div class="row business-listings">';
 	foreach(getBusinessListings($a['category']) as $listing){
-		echo $listing->photo;
 		$output .= '
 		<div class="col-md-6 col-lg-4 mb-4">
 			<div class="card text-center full-height">
