@@ -19,13 +19,13 @@
 
                 <div class="row py-4 align-items-center">
                     <div class="col-lg-6 py-4">
-                        <article class="front">
+                        <article class="front" tabindex="0">
                             
                             {{ the_content() }}
 
                         </article>
                     </div>
-                    <div class="col-lg-6 py-4">
+                    <div class="col-lg-6 py-4" tabindex="0">
                         <div class="embed-responsive embed-responsive-16by9">
                         {!! $video !!}
                         <button v-if="!videoPlaying" class="video-button" aria-hidden="true" @click="playVideo" ref="videobutton"></button>
