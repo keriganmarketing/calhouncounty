@@ -11,7 +11,7 @@
         "@babel/preset-env": "^7.9.5",
         "alertifyjs": "^1.11.1",
         "autoprefixer": "^9.7.6",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "axios-extensions": "^3.0.3",
         "bootstrap": "^4.1.3",
         "bootstrap-vue": "^2.0.0-rc.11",
