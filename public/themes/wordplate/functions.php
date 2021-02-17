@@ -132,7 +132,7 @@ function team_shortcode( $atts ) {
                         <a href="tel:' . get_field('phone', $member->ID) . '" >' . get_field('phone', $member->ID) . '</a>
                     </p>';
             if(get_field('website',$member->ID) != ''){
-                $output .='<a class="btn btn-primary rounded-pill" href="tel:' . get_field('website', $member->ID) . '" >visit website</a>';
+                $output .='<a class="btn btn-small btn-primary rounded-pill" href="' . get_field('website', $member->ID) . '" >visit website</a>';
             }
 
         $output .='</div>
