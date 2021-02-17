@@ -130,8 +130,12 @@ function team_shortcode( $atts ) {
                     <p>
                         <a href="mailto:' . get_field('email', $member->ID) . '" >' . get_field('email', $member->ID) . '</a><br>
                         <a href="tel:' . get_field('phone', $member->ID) . '" >' . get_field('phone', $member->ID) . '</a>
-                    </p>
-                </div>
+                    </p>';
+            if(get_field('website',$member->ID) != ''){
+                $output .='<a class="btn btn-primary rounded-pill" href="tel:' . get_field('website', $member->ID) . '" >visit website</a>';
+            }
+
+        $output .='</div>
             </div>
         </div>';
     }
