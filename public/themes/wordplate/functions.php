@@ -51,7 +51,7 @@ add_action('after_setup_theme', function () {
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
 
     wp_enqueue_style('wordplate', mix('styles/main.css'));
 
