@@ -81,8 +81,8 @@ class Team {
                         <img v-lazy="'<?php echo $member->image['sizes']['thumbnail']; ?>'" class="mx-auto mbn-2 rounded-circle border border-secondary" >
                     </div>
                     <div class="team-content flex-grow my-2">
-                        <h3 class="pt-3 mb-0 display-4 text-primary"><?php echo $member->post_title; ?></h3>
-                        <p class="m-0 text-secondary text-uppercase"><?php echo $member->title; ?></p>
+                        <h3 class="pt-3 mb-0 display-4 text-primary" tabindex="0"><?php echo $member->post_title; ?></h3>
+                        <p class="m-0 text-secondary text-uppercase" tabindex="0"><?php echo $member->title; ?></p>
                         <?php if($member->phone != '') { ?>
                         <p class="m-0"><a class="text-primary" href="tel:<?php echo $member->phone; ?>" ><?php echo $member->phone; ?></a></p>
                         <?php } ?>
