@@ -9,11 +9,11 @@
             <div class="container">
                 <article class="support">
                     <header>
-                        <h1>{{ $headline != '' ? $headline : the_title() }}</h1>
+                        <h1 tabindex="0">{{ $headline != '' ? $headline : the_title() }}</h1>
                     </header>
                     <div class="row">
                         <div class="col-md-4">
-                            <img class="img-fluid" src="{{ $team['image']['url'] }}" alt="{{ $team['image']['alt'] }}">
+                            <img class="img-fluid" tabindex="0" src="{{ $team['image']['url'] }}" alt="{{ $team['image']['alt'] }}">
                             <p>&nbsp;</p>
                         </div>
                         <div class="col-md-8">
