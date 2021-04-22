@@ -17,8 +17,8 @@
         <main id="content" role="main" class="sizable">
             <div class="container">
 
-                <div class="row py-4 align-items-center">
-                    <div class="col-lg-12 py-4">
+                <div class="row pt-4 align-items-center">
+                    <div class="col-lg-12 pt-4">
                         <article class="front" tabindex="0">
                             
                             {{ the_content() }}
@@ -32,8 +32,8 @@
                         </div>
                     </div> --}}
                 </div>
-                <div class="row py-4 align-items-center">
-                    <div class="col-lg-12 py-4">
+                <div class="row pb-4 align-items-center">
+                    <div class="col-lg-12">
                         <div class="col-lg-12 py-4" tabindex="0">
                             <div class="embed-responsive embed-responsive-16by9">
                             {!! $video !!}
